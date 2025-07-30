@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "167732394381",
+    "project_id": "kkiss-firebase",
+    "storage_bucket": "kkiss-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167732394381:android:62c46f57101da01c5b65c4",
+        "android_client_info": {
+          "package_name": "com.example.sender_firebase_noti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167732394381-gi9n3roemco42jf0l0gg8k16dh9vfbk4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sender_firebase_noti",
+            "certificate_hash": "13fb6b5028b257e6895069f19deb1fb89096bc21"
+          }
+        },
+        {
+          "client_id": "167732394381-orkrp120i5gerupnfnn25c87862n8j0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrs1GpUyGa8fDMLKKBPa5lFkvfRZqnw90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167732394381-orkrp120i5gerupnfnn25c87862n8j0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
