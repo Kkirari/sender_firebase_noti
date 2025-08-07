@@ -11,9 +11,9 @@ class FirebaseServices {
   Future<void> signInWithGoogle() async {
     try {
       // เริ่มต้นกระบวนการ Google Sign-In
-      final GoogleSignInAccount? googleSignInAccount = await _googleSignIn
-          .signIn();
-
+      final GoogleSignInAccount? googleSignInAccount = 
+          await _googleSignIn.signIn();
+      
       if (googleSignInAccount != null) {
         final GoogleSignInAuthentication googleSignInAuthentication =
             await googleSignInAccount.authentication;
@@ -24,9 +24,8 @@ class FirebaseServices {
         );
 
         // ลงชื่อเข้าใช้ Firebase ด้วย Google credentials
-        final UserCredential userCredential = await _auth.signInWithCredential(
-          authCredential,
-        );
+        final UserCredential userCredential = 
+            await _auth.signInWithCredential(authCredential);
 
         // บันทึกข้อมูลผู้ใช้ลง Firestore (หากยังไม่มี)
         if (userCredential.user != null) {
@@ -44,7 +43,10 @@ class FirebaseServices {
   Future<void> googleSignOut() async {
     try {
       // ออกจากระบบ Google และ Firebase
-      await Future.wait([_googleSignIn.signOut(), _auth.signOut()]);
+      await Future.wait([
+        _googleSignIn.signOut(),
+        _auth.signOut(),
+      ]);
     } catch (e) {
       throw Exception('Sign out error: ${e.toString()}');
     }
@@ -54,10 +56,10 @@ class FirebaseServices {
   Future<void> _saveUserToFirestore(User user) async {
     try {
       final userDoc = _firestore.collection('users').doc(user.uid);
-
+      
       // เช็คว่าผู้ใช้มีข้อมูลใน Firestore แล้วหรือไม่
       final docSnapshot = await userDoc.get();
-
+      
       if (!docSnapshot.exists) {
         // สร้างข้อมูลผู้ใช้ใหม่
         await userDoc.set({
@@ -69,7 +71,9 @@ class FirebaseServices {
         });
       } else {
         // อัปเดตเวลาล็อกอินล่าสุด
-        await userDoc.update({'lastSignIn': FieldValue.serverTimestamp()});
+        await userDoc.update({
+          'lastSignIn': FieldValue.serverTimestamp(),
+        });
       }
     } catch (e) {
       print('Error saving user to Firestore: ${e.toString()}');

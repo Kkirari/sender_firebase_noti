@@ -23,19 +23,15 @@ class NavItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
-            icon,
-            color: isSelected
-                ? Theme.of(context).primaryColor
-                : Colors.grey[400],
+            icon, 
+            color: isSelected ? Theme.of(context).primaryColor : Colors.grey[400],
             size: 22,
           ),
           const SizedBox(height: 6),
           Text(
             label,
             style: TextStyle(
-              color: isSelected
-                  ? Theme.of(context).primaryColor
-                  : Colors.grey[500],
+              color: isSelected ? Theme.of(context).primaryColor : Colors.grey[500],
               fontSize: 12,
               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
               letterSpacing: 0.3,

@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sender_firebase_noti/Auth/login_page.dart';
-import 'package:sender_firebase_noti/Auth/google_service.dart';
+import 'package:sender_firebase_noti/Auth/presentation/login_screen.dart';
+import 'package:sender_firebase_noti/Auth/services/google_service.dart';
+
 import 'package:sender_firebase_noti/Widgets/bunton.dart';
 
 class ProfileScreen extends StatelessWidget {

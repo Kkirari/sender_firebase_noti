@@ -73,7 +73,7 @@ class _CreateScreenState extends State<CreateScreen> {
                           Positioned(
                             left: 0,
                             top: 0,
-                            child: Container(
+                            child: SizedBox(
                               width: MediaQuery.of(context).size.width * 0.55,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,7 +155,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
 
                     // 🆕 ปรับปรุงปุ่มตาม trend
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       height: 56, // 🆕 เพิ่มความสูง
                       child: ElevatedButton(
@@ -192,12 +192,10 @@ class _CreateScreenState extends State<CreateScreen> {
                               shadowColor: Colors.transparent,
                             ).copyWith(
                               backgroundColor:
-                                  MaterialStateProperty.resolveWith<Color>((
-                                    Set<MaterialState> states,
+                                  WidgetStateProperty.resolveWith<Color>((
+                                    Set<WidgetState> states,
                                   ) {
-                                    if (states.contains(
-                                      MaterialState.pressed,
-                                    )) {
+                                    if (states.contains(WidgetState.pressed)) {
                                       return const Color(0xFF5A67D8);
                                     }
                                     return const Color(0xFF667EEA);

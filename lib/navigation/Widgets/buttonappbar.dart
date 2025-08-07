@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sender_firebase_noti/navigation/widget/buidnavitem.dart';
+import 'package:sender_firebase_noti/Navigation/Widgets/buidnavitem.dart';
 
 class ButtomAppBar extends StatelessWidget {
   final int selectIndex;

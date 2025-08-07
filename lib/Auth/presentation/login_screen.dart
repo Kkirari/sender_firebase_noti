@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:sender_firebase_noti/Auth/google_service.dart';
+import 'package:sender_firebase_noti/Auth/services/google_service.dart';
 import 'package:sender_firebase_noti/Navigation/presentation/navigation_screen.dart';
 import 'package:sender_firebase_noti/Widgets/snackbar.dart';
 
